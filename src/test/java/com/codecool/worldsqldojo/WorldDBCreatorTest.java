@@ -18,11 +18,11 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WorldDBCreatorTest {
-    private static WorldDBCreator worldDBCreator;
+    private static com.codecool.worldsqldojo.WorldDBCreator worldDBCreator;
 
     @BeforeAll
     public static void setUp() {
-        worldDBCreator = new WorldDBCreator();
+        worldDBCreator = new com.codecool.worldsqldojo.WorldDBCreator();
     }
 
     @AfterAll

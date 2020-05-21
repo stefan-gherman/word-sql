@@ -13,8 +13,8 @@ import java.sql.*;
 
 public class WorldDBCreator {
     private static final String DATABASE = "jdbc:postgresql://localhost:5432/world";
-    private static final String DB_USER = System.getenv("POSTGRES_DB_USER");
-    private static final String DB_PASSWORD = System.getenv("POSTGRES_DB_PASSWORD");
+    private static final String DB_USER = System.getenv("PSQL_USER_NAME");
+    private static final String DB_PASSWORD = System.getenv("PSQL_PASSWORD");
 
     public WorldDBCreator() {
         executeUpdateFromFile("src/main/resources/init_db.sql");
