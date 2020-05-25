@@ -42,6 +42,23 @@ CREATE TABLE countrylanguage
     UNIQUE (countrycode, language)
 );
 
+TRUNCATE TABLE city CASCADE;
+TRUNCATE TABLE country CASCADE;
+TRUNCATE TABLE countrylanguage CASCADE;
+
+-- COPY countrylanguage FROM
+--     '/mnt/7d45c543-fc06-4310-b70a-2a9aa2e43a54/Projects/codecool/java/word-sql/src/test/resources/countrylanguage_data.txt';
 
 
+EXPLAIN SELECT * FROM city
+WHERE name = 'Tallahassee';
+
+CREATE INDEX city_in_a_snow_globe_idx ON city USING btree(name);
+
+
+EXPLAIN SELECT * FROM city
+        WHERE name = 'Tallahassee';
+
+
+DROP INDEX city_in_a_snow_globe_idx;
 
